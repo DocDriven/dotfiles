@@ -2,6 +2,10 @@ local g = vim.g
 local o = vim.o
 local opt = vim.opt
 
+-- Map <Leader> to space key
+g.mapleader = " "
+g.maplocalleader = " "
+
 o.termguicolors = true
 
 -- Decrease update time
@@ -17,6 +21,12 @@ o.numberwidth = 6
 o.relativenumber = true
 o.signcolumn = 'yes'
 o.cursorline = true
+
+-- unlimited undo
+o.swapfile = false
+o.backup = false
+o.undodir = os.getenv("HOME") .. "/.vim/undodir"
+o.undofile = true
 
 -- Better editing experience
 o.expandtab = true
@@ -46,11 +56,4 @@ o.splitbelow = true
 
 -- Use mouse in all modes
 opt.mouse = "a"
-
--- Map <Leader> to space key
-g.mapleader = " "
-g.maplocalleader = " "
-
--- Plugin config
-g["deoplete#enable_at_startup"] = 1
 
