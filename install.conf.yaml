@@ -1,0 +1,17 @@
+# default actions for items in link section
+- defaults:
+    link:
+      relink: true # removes old target if it is a symlink
+
+- clean: ['~'] # dir to inspect and autoremove dead links
+
+- link:
+    ~/.bashrc: bashrc
+    ~/.gitconfig: gitconfig
+    ~/.tmux.conf: tmux.conf
+    ~/.config/nvim: config/nvim
+
+# raw shell commands run upon execution of install script
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+
