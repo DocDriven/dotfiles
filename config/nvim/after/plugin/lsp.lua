@@ -44,3 +44,10 @@ lsp.on_attach(function(client, bufnr)
 end)
 
 lsp.setup()
+
+-- LSP for C/C++
+require('lspconfig').clangd.setup({
+    cmd = { 'clangd', '--background-index', '--compile-commands-dir=.' },
+    filetypes = { 'c', 'cpp' },
+    root_dir = require('lspconfig.util').root_pattern('.clangd', 'compile_commands.json'),
+})
