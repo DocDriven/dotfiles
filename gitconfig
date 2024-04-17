@@ -1,3 +1,5 @@
 [user]
 	name = skraust
 	email = sebastian.kraust@oth-regensburg.de
+[alias]
+	adgo = log --all --decorate --graph --oneline
