@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# xinitrc runs automatically when you run startx
+
+if [ -f "$XDG_CONFIG_HOME:-$HOME/.config}/x11/xprofile" ]; then
+  source "$XDG_CONFIG_HOME:-$HOME/.config}/x11/xprofile"
+elif [ -f "$HOME/.xprofile"]; then
+  source "$HOME/.xprofile"
+fi
+
+# list the things that shall be started
+ssh-agent i3
+

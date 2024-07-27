@@ -1,15 +1,29 @@
 # default actions for items in link section
 - defaults:
     link:
+      create: true
       relink: true # removes old target if it is a symlink
 
 - clean: ['~'] # dir to inspect and autoremove dead links
 
+- create:
+    ~/.local:
+      mode: 0700
+    ~/.local/bin:
+    ~/.cache:
+    ~/.config:
+      mode: 750
+
 - link:
-    ~/.bashrc: bashrc
+    ~/.config/i3: config/i3
+    ~/.config/nvim: config/nvim
+    ~/.config/polybar: config/polybar
+    ~/.config/ranger: config/ranger
+    ~/.config/x11: config/x11
+    ~/.config/zsh: config/zsh
     ~/.gitconfig: gitconfig
     ~/.tmux.conf: tmux.conf
-    ~/.config/nvim: config/nvim
+    ~/.zshenv: zshenv
 
 # raw shell commands run upon execution of install script
 - shell:

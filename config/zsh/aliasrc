@@ -1,0 +1,25 @@
+#!/bin/zsh
+
+# Use neovim whenever possible
+[ $commands[nvim] ] && {
+  alias v='nvim';
+  alias vi='nvim';
+  alias vim='nvim';
+  alias view='nvim -R';
+}
+
+# Use XINITRC variable if file exists
+[ -f "$XINITRC" ] && alias startx="startx $XINITRC"
+
+# Enhance common commands per default
+alias \
+  cp="cp -iv" \
+  mv="mv -iv" \
+  rm="rm -vI" \
+  bc="bc -ql" \
+  mkdir="mkdir -pv" \
+  ls="ls -hN --color=auto --group-directories-first" \
+  ll="ls -alF" \
+  grep="grep --color=auto" \
+  diff="diff --color=auto"
+
