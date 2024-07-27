@@ -19,6 +19,10 @@ return require('packer').startup(function(use)
     -- Packer can manage itself
     use("wbthomason/packer.nvim")
 
+    -- Provide icons
+    use("nvim-tree/nvim-web-devicons")
+    use("echasnovski/mini.icons")
+
     -- Keymap overview
    use("folke/which-key.nvim")
 

@@ -7,25 +7,32 @@ if not status then
     return
 end
 
-which_key.register({
-        b = {
-            name = "buffer",
-        },
-        f = {
-            name = "file",
-        },
-        h = {
-            name = "harpoon",
-        },
-        v = {
-            name = "view",
-        },
-    },
-    {
-        mode = "n",
-        prefix = "<leader>",
-        noremap = true,
-        nowait = true,
-    }
-)
+which_key.add({
+  { "<leader>f", group = "file" },
+  { "<leader>b", group = "buffer" },
+  { "<leader>h", group = "harpoon" },
+  { "<leader>v", group = "view" },
+})
+
+-- which_key.register({
+--         b = {
+--             name = "buffer",
+--         },
+--         f = {
+--             name = "file",
+--         },
+--         h = {
+--             name = "harpoon",
+--         },
+--         v = {
+--             name = "view",
+--         },
+--     },
+--     {
+--         mode = "n",
+--         prefix = "<leader>",
+--         noremap = true,
+--         nowait = true,
+--     }
+-- )
 
