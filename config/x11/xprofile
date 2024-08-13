@@ -1,9 +1,10 @@
 #!/bin/sh
 
 # Set DPI for all screens
-xrandr --dpi 96
+xrandr --dpi 192
 
 # Configure colors and settings for X applications
-# xrdb ${XDG_CONFIG_HOME:-$HOME/.config}/x11/xresources & xrdbpid=$!
+xrdb ${XDG_CONFIG_HOME:-$HOME/.config}/x11/xresources & xrdbpid=$!
 
-
+# Ensure that xrdb has finished running before moving on to start the WM/DE.
+[ -n "$xrdbpid" ] && wait "$xrdbpid"
