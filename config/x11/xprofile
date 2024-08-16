@@ -3,6 +3,12 @@
 # Set DPI for all screens
 xrandr --dpi 192
 
+# Run the notification daemon
+dunst &
+
+# Set background for desktop
+feh --bg-fill ${XDG_CONFIG_HOME:-$HOME/.config}/bg/wallpaper.jpg &
+
 # Configure colors and settings for X applications
 xrdb ${XDG_CONFIG_HOME:-$HOME/.config}/x11/xresources & xrdbpid=$!
 
