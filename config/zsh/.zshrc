@@ -6,7 +6,7 @@ precmd() { vcs_info }
 autoload -U colors && colors
 zstyle ':vcs_info:git:*' formats " %F{165}%b"
 setopt PROMPT_SUBST
-PS1='%B%F{9}[%F{69}%n%F{11}@%F{250}%M %F{11}%~${vcs_info_msg_0_}%F{9}] %F{138}>%{$reset_color%} '
+PS1='%B%F{5}[%F{4}%n%F{6}@%F{15}%M %F{6}%~${vcs_info_msg_0_}%F{5}] %F{138}>%{$reset_color%} '
 
 # Autochange w/o cd, disable terminal freeze, and allow comments in shell sessions
 setopt autocd
