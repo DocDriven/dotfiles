@@ -183,5 +183,11 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# lock screen with $mod+Alt+l
+bindsym $mod+Mod1+l exec --no-startup-id i3lock
+
+# lock screen and suspend with $mod+Alt+s
+bindsym $mod+Mod1+s exec --no-startup-id i3lock && systemctl suspend
+
 # start polybar
 exec_always --no-startup-id $XDG_CONFIG_HOME/polybar/launch.sh
