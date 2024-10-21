@@ -1,4 +1,3 @@
 config/nvim/lazy-lock.json
 config/nvim/lazyvim.json
-config/autorandr/*
-!config/autorandr/**
+config/autorandr/*/*
