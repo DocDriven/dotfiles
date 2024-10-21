@@ -23,6 +23,13 @@ font pango:monospace 8
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
 
+# Run autorandr to automatically adjust monitor layout based on connected hardware.
+# Do not forget to add a udev rule and restart udev for it to take effect
+exec --no-startup-id autorandr --change
+
+# Set the background using feh after autorandr has applied the monitor layout
+exec --no-startup-id feh --bg-fill ${XDG_CONFIG_HOME:-$HOME/.config}/bg/wallpaper.jpg
+
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 

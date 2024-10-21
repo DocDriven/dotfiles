@@ -7,7 +7,7 @@ xrandr --dpi 192
 dunst &
 
 # Set background for desktop
-feh --bg-fill ${XDG_CONFIG_HOME:-$HOME/.config}/bg/wallpaper.jpg &
+# feh --bg-fill ${XDG_CONFIG_HOME:-$HOME/.config}/bg/wallpaper.jpg &
 
 # Configure colors and settings for X applications
 xrdb ${XDG_CONFIG_HOME:-$HOME/.config}/x11/xresources & xrdbpid=$!
