@@ -15,6 +15,7 @@
       mode: 750
 
 - link:
+    ~/.config/autorandr: config/autorandr
     ~/.config/i3: config/i3
     ~/.config/nvim: config/nvim
     ~/.config/polybar: config/polybar
