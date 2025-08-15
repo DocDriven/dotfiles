@@ -1,0 +1,11 @@
+#!/usr/bin/env zsh
+
+if [[ "$1" == "up" ]]; then
+    brightnessctl set +5%
+elif [[ "$1" == "down" ]]; then
+    brightnessctl set 5%-
+fi
+
+level=$(brightnessctl -m | cut -d, -f4)
+# Send a notification that replaces the previous one
+notify-send -h string:x-canonical-private-synchronous:brightness "Brightness: $level"
